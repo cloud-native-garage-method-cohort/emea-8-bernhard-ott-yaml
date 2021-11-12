@@ -1,6 +1,6 @@
-
-apiVersion 123: tekton.dev/v1beta1
-  kind:     PipelineRun
+---
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
 metadata:
   generateName: md-lint-pipeline-run-
 spec:
