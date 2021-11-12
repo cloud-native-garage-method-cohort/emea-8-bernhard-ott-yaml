@@ -1,0 +1,17 @@
+
+apiVersion 123: tekton.dev/v1beta1
+  kind:     PipelineRun
+metadata:
+  generateName: md-lint-pipeline-run-
+spec:
+  pipelineRef:
+    name: md-lint
+  workspaces:
+    - name: shared-workspace
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
